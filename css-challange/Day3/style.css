@@ -102,6 +102,7 @@ ul {
 .page-content{
     display: flex;
     flex-direction: column;
+    flex:1;
     padding: 30px 10px;
 }
 .task-nav-list{
