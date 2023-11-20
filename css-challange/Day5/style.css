@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg:rgb(239, 229, 229);
+    --insta:rgb(212, 47, 121);
+    --facebbok:rgb(16, 93, 207);
+    --youtube:rgb(231, 46, 74);
+    --github:rgb(20, 19, 19);
+    --twitter:rgb(63, 174, 230);
+
+
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    align-items: center;
+    height: 250px;
+    background-color: var(--bg);
+    box-shadow: 2px 2px var(--bg);
+}
+.item{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    position: relative;
+    cursor: pointer;
+    margin: 5px;
+}
+item.insta:hover::before{
+    content: 'instagram';
+    position: absolute;
+    width: 100%;
+    background-color: var(--insta);
+
+}
+.tooltip{
+    position: absolute;
+    visibility: hidden;
+    font-size: 18px;
+    padding: 5px;
+    top: -40px;
+}
+.item.insta:hover,
+.item.insta:hover .tooltip{
+    background-color: var(--insta);
+    color: white;
+    visibility: visible;
+}
+.item.face:hover,
+.item.face:hover .tooltip{
+    background-color: var(--facebbok);
+    color: white;
+    visibility: visible;
+}
+.item.twt:hover,
+.item.twt:hover .tooltip{
+    background-color: var(--twitter);
+    color: white;
+    visibility: visible;
+}
+.item.git:hover,
+.item.git:hover .tooltip{
+    background-color: var(--github);
+    color: white;
+    visibility: visible;
+}
+.item.youtube:hover,
+.item.youtube:hover .tooltip{
+    background-color: var(--youtube);
+    color: white;
+    visibility: visible;
+}
