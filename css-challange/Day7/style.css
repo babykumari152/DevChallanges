@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    
+}
+.item{
+    padding: 5px;
+    margin:0 5px;
+    border-bottom: 2px solid gray;
+    
+}
+label{
+    cursor: pointer;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+input[type="radio"]{
+    display: none;
+}
+.ans{
+    visibility: hidden;
+}
+.minus{
+    display: none;
+}
+input[type="radio"]:checked +label +.ans {
+    visibility: visible;
+}
+input[type="radio"]:checked +label>.minus{
+    display: block;
+}
+input[type="radio"]:checked +label>.plus{
+    display: none;
+}
