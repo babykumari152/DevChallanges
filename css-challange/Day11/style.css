@@ -1,0 +1,92 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+}
+:root{
+    --highlist-col:black;
+    --nonhighlight-col:#26262c;
+    --hover-col:rgb(244, 236, 236);
+    --bg-col:rgb(24, 112, 207);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-col);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: var(--nonhighlight-col);
+    text-align: center;
+}
+.container{
+    background-color: var(--hover-col);
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    max-height: 800px;
+    width: 60vw;
+    max-width: 80vw;
+    position: absolute;
+    padding: 2rem;
+    box-shadow: .1rem .1rem .1rem var(--nonhighlight-col), -.1rem -.1rem .1rem var(--nonhighlight-col);
+}
+.card-conatiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.heading, .price{
+    color: var(--highlist-col);
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+.subheading{
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+  height: auto;
+  width: 32%;
+  border-radius: 1.5rem;
+  box-shadow: .1rem .1rem .2rem honeydew,-.1rem -.1rem .2rem honeydew;
+  padding: 2rem;
+}
+.feature, .price{
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--nonhighlight-col);
+}
+button{
+    height: 2.5rem;
+    width: 6rem;
+    background-color: var(--bg-col);
+    margin-top: 1rem;
+}
+#check{
+    display: none;
+}
+.toggle > label{
+    display: flex;
+    background-color: var(--bg-col);
+    width: 2rem;
+    height: 1rem;
+    border-radius: .2rem;
+}
+.circle{
+    background-color: var(--hover-col);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+input[type='checkbox']:checked + label{
+    justify-content: flex-end;
+
+}

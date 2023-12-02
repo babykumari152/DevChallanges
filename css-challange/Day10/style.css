@@ -22,9 +22,17 @@ body{
 input[type="radio"]{
     display: none;
 }
-label>span{
+span{
+    padding-left: 25px ;
+
+}
+.btn{
+    padding-bottom: 15px;
+}
+label{
     position: relative;
     padding-left: 20px;
+    
 }
 label::before 
     {
@@ -34,9 +42,8 @@ label::before
     border-radius: 50%;
     position: absolute;
     margin-right: 10px;
-    box-shadow: inset 0 0 0 var(--custom-btn-border) wheat;
+    box-shadow: inset 0 0 0 1.5px wheat;
 }
-input:checked + label::before{
-    background-color: rgb(234, 231, 227);
-    box-shadow: inset 0 0 0 5px rgb(36, 30, 18);
+input[type="radio"]:checked + label::before {
+    box-shadow: inset 0 0 0 5px rgb(58, 54, 46);
 }
